@@ -35,21 +35,6 @@
 * **🛡️ Secure & Stable:** Built on a custom `fb-chat-api` for maximum stability.
 * **📊 Advanced Logging:** Comprehensive logging system to track every action.
 
----
-
-## 📂 Repository Structure
-| Folder | Purpose |
-| :--- | :--- |
-| 📁 `bot` | Core automation logic and command handlers. |
-| 📁 `dashboard` | Source code for the web management interface. |
-| 📁 `database` | System for user data and persistent storage. |
-| 📁 `fb-chat-api` | Modified API for platform communication. |
-| 📁 `func` | Shared utility functions and helper methods. |
-| 📁 `languages` | JSON files for multi-language support. |
-| 📁 `logger` | System logs and activity tracking. |
-| 📁 `scripts` | Maintenance and startup scripts. |
-
----
 
 ## 🛠️ Installation Guide
 1. **Clone the project:** `git clone https://github.com/goatbotnx/GOAT-BOT-V2.git`
