@@ -14,6 +14,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Maintained%3F-Yes-green.svg?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=for-the-badge" />
+   <img src="https://img.shields.io/badge/NODE%20VERSION-%3E%3D20.x-green?logo=node.js&logoColor=white" alt="Node Version">
   <img src="https://img.shields.io/badge/Bot_Version-V2.0-blueviolet?style=for-the-badge" />
 </p>
 
