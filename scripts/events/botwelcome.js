@@ -24,7 +24,7 @@ module.exports = {
                 const ctx = canvas.getContext("2d");
 
 
-                const bg = await loadImage("https://i.ibb.co/VWj5xLWR/6641a83f9935.jpg");
+                const bg = await loadImage("https://i.ibb.co/HDBBGLyX/a69de460fad6.jpg");
                 ctx.drawImage(bg, 0, 0, 1000, 500);
                 ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
                 ctx.roundRect(100, 80, 800, 340, 30);
