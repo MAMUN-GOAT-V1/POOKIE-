@@ -12,7 +12,7 @@ const doNotDelete = "〲MAYBE NX ";
 
 module.exports = {
  config: {
- name: "help",
+ name: "help2",
  version: "1.18",
  author: "ArYAN",
  countDown: 5,
