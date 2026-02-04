@@ -1,60 +1,41 @@
-const axios = require('axios');
+const axios = require("axios");
 
 module.exports = {
-	config: {
-		name: "waifu",
-		aliases: ["wife"],
-		version: "1.0",
-		author: "tas3n",
-		countDown: 6,
-		role: 0,
-		shortDescription: "get random waifu",
-		longDescription: "Get waifu neko: waifu, neko, shinobu, megumin, bully, cuddle, cry, kiss, lick, hug, awoo, pat, smug, bonk, yeet, blush, smile, wave, highfive, handhold, nom, bite, glomp, slap, kill, kick, happy, wink, poke, dance, cringe",
-		category: "anime",
-		guide: "{pn} {{<name>}}"
-	},
+  config: {
+    name: "waifu",
+    version: "1.0.1",
+    role: 0,
+    author: "xalman",
+    description: "Sends a random waifu image",
+    category: "anime",
+    guide: "{pn}",
+    countDown: 5
+  },
 
-	onStart: async function ({ message, args }) {
-		const name = args.join(" ");
-		if (!name)
+  onStart: async function ({ api, event }) {
+    try {
+      api.setMessageReaction("⏳", event.messageID, () => {}, true);
 
-			try {
-				let res = await axios.get(`https://api.waifu.pics/sfw/waifu`)
+      const githubRawUrl = "https://raw.githubusercontent.com/goatbotnx/Sexy-nx2.0Updated/refs/heads/main/nx-apis.json";
+      const githubRes = await axios.get(githubRawUrl);
+      const apiBaseUrl = githubRes.data.meme; 
 
+      const res = await axios.get(`${apiBaseUrl}/waifu`);
+      const imageUrl = res.data.url;
+      const attachment = await axios.get(imageUrl, { responseType: "stream" });
 
-				let res2 = res.data
-				let img = res2.url
+      return api.sendMessage({
+        body: "Here is your waifu! ✨",
+        attachment: attachment.data
+      }, event.threadID, (err) => {
+        if (!err) {
+          api.setMessageReaction("✅", event.messageID, () => {}, true);
+        }
+      }, event.messageID);
 
-				const form = {
-					body: `   「 𝔀𝓪𝓲𝓯𝓾  」   `
-
-				};
-				if (img)
-					form.attachment = await global.utils.getStreamFromURL(img);
-				message.reply(form);
-			} catch (e) {
-				message.reply(` Not Found`)
-			}
-
-
-		else {
-
-			try {
-				let res = await axios.get(`https://api.waifu.pics/sfw/${name}`)
-
-
-				let res2 = res.data
-				let img1 = res2.url
-
-				const form = {
-					body: `   「 𝔀𝓪𝓲𝓯𝓾  」   `
-
-				};
-				if (img1)
-					form.attachment = await global.utils.getStreamFromURL(img1);
-				message.reply(form);
-			} catch (e) { message.reply(` No waifu  \category: waifu, neko, shinobu, megumin, bully, cuddle, cry, kiss, lick, hug, awoo, pat, smug, bonk, yeet, blush, smile, wave, highfive, handhold, nom, bite, glomp, slap, kill, kick, happy, wink, poke, dance, cringe `) }
-
-		}
-	}
+    } catch (error) {
+      api.setMessageReaction("❌", event.messageID, () => {}, true);
+      return api.sendMessage("Failed to fetch waifu image.", event.threadID);
+    }
+  }
 };
