@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://files.catbox.moe/dvf1s1.jpg" width="150" height="150" style="border-radius: 50%; border: 3px solid #7000ff;" alt="Xalman Hossain">
+  <img src="https://files.catbox.moe/pomss3.jpg" width="150" height="150" style="border-radius: 50%; border: 3px solid #7000ff;" alt="Xalman Hossain">
   <br>
-  <a href="https://www.facebook.com/nx210.2.0" target="_blank">
+  <a href="https://www.facebook.com/mamun.8192" target="_blank">
     <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />
   </a>
-  <a href="https://wa.me/8801876118312" target="_blank">
+  <a href="https://wa.me/8801830981279" target="_blank">
     <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
 </p>
@@ -25,7 +25,7 @@
 ---
 
 ## 👨‍💻 Developed By
-**Xalman Hossain** *Passionate Developer | Bot Specialist |*
+**亗🅼🅰ᥫᩣ🅼ᥫᩣ🆄🅽×͜× *Passionate Developer | Bot Specialist |*
 
 ---
 
@@ -39,7 +39,7 @@
 ---
 
 ## 🛠️ Installation Guide
-1. **Clone the project:** `git clone https://github.com/goatbotnx/GOAT-BOT-V2.git`
+1. **Clone the project:** `git clone 
 2. **Install dependencies:** `npm install`
 3. **Launch the bot:** `node index.js`
 
